@@ -1,3 +1,14 @@
+// JSON
+// Put closing tag in logic
+// tag: string to describe the html node element
+// content: string text content between open and closing tags
+// children: array of child elements as objects
+// attributes: object to enumerate attributes as key
+  // class: array of strings for class names
+  // src: string for image path
+
+
+// RENDER
 // load json data via AJAX
 // parse json data
   // create big ass object
