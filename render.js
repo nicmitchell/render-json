@@ -7,94 +7,85 @@
   // class: array of strings for class names
   // src: string for image path
 
-
 // RENDER
 // load json data via AJAX
 // parse json data
-  // create big ass object
-  // pass object to recurse function
 
-$.ajax({
-  url: 'data.json',
-  type: 'GET',
-  dataType: 'json'
-  // context: document.body
-}).done(function(data, status, request) {
-  // console.log( 'success!!!1!' );
-  // console.log( 'data',  data);
-  // console.log( 'status',  status);
-  // console.log( 'request',  request);
-  data.forEach(function(child, index, array) {
-    var $parent = $('body');
-    render(child, $parent);
+$(function(){
+  $.ajax({
+    url: 'data.json',
+    type: 'GET',
+    dataType: 'json'
+  }).done(function(nodes, status, request) {
+
+    // pass each child node to render function
+    nodes.forEach(function(child, index, array) {
+      var $parent = $('body');
+      render(child, $parent);
+    });
+  })
+  .fail(function(request, status, error) {
+
+    // Uh oh!
+    var message = '<p style="text-align:center">Oops, something went wrong: ' + error + '</p>';
+    $('body').append(message);
   });
-})
-.fail(function(request, status, error) {
-  var message = '<p style="text-align:center">Oops, something went wrong: ' + error + '</p>';
-  $('body').append(message);
-});
 
-// recurse through children nodes
-// base case: if no children
-  // return
-// not doing depth first recursion, so no base case necessary
-var render = function(node, $parent){
-  console.log('node', node.tag);
-  var element = [];
-  var attributes = node.attributes;
-  // open tag and element 
-  element.push('<' + node.tag);
+  // recurse through children nodes
+  // not doing depth first recursion, so no base case necessary
+  var render = function(node, $parent){
+    var element = [];
+    var attributes = node.attributes;
+    // open tag and element 
+    element.push('<' + node.tag);
 
-  // debugger;
-  // if has attributes
-  if (attributes){
-    // add all attributes
-    for (var key in attributes){
-      // if the attribute contains an array, add all elements (like classes)
-      if (Array.isArray(attributes[key])){
-      // add attribute key to element
-      // add attribute value in double quotes
-        element.push(key + '="' + attributes[key].join(' ') + '"');
-      // add the single attribute to element
-      } else {
-        element.push(key + '="' + attributes[key] + '"');
+    // if has attributes
+    if (attributes){
+
+      // add all attributes
+      for (var key in attributes){
+
+        // if the attribute contains an array, add all elements (like classes)
+        if (Array.isArray(attributes[key])){
+
+        // add attribute key to element
+        // add attribute value in double quotes
+          element.push(key + '="' + attributes[key].join(' ') + '"');
+
+        // add the single attribute to element
+        } else {
+          element.push(key + '="' + attributes[key] + '"');
+        }
       }
     }
-  }
 
-  // close the tag
-  // this could also go in json data
-  if (node.tag === 'img'){
-    element.push('/>');
-  } else {
-    element.push('></' + node.tag);
-  }
+    // close the tag
+    // this could also go in json data
+    if (node.tag === 'img'){
+      element.push('/>');
+    } else {
+      element.push('></' + node.tag);
+    }
 
-  // make a jQuery object out of the element
-  var $element = $(element.join(' '));
+    // make a jQuery object out of the element
+    var $element = $(element.join(' '));
 
-  // write current value to the DOM
-  $parent.append($element);
+    // write current value to the DOM
+    $parent.append($element);
 
-  // if has content, write it to the DOM  
-  if(node.content){
-    $element.text(node.content);
-  }
+    // if has content, write it to the DOM  
+    if(node.content){
+      $element.text(node.content);
+    }
 
-  // if it has children, repeat for children
-  if(node.children){
-    // recurse, passing in children array
-    debugger;
-    // render(node.children, $element);
-    node.children.forEach(function(child, index, array) {
+    // if it has children, recurse for children
+    if(node.children){
+      node.children.forEach(function(child, index, array) {
+        
+        // pass in the target child and it's parent element
+        render(child, $element);
+      });
+    }
 
-      render(child, $element);
-    });
-  }
-
-};
-
-
-
-// append to body
-
+  };
+});
