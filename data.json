@@ -33,14 +33,11 @@
         ]
       }
     ]
-  },
-  {
+  }, {
     "tag": "div",
-    "attributes": [
-      {
-        "class": ["container"]
-      }
-    ],
+    "attributes": {
+      "class": ["container"]
+    },
     "children": [
       {
         "tag": "div",
@@ -57,10 +54,198 @@
           }, {
             "tag": "img",
             "attributes": {
-
+              "src": "images/cubed.jpg"
             }
-
-            
+          }, {
+            "tag": "p",
+            "content": "Nunc eu lectus mi. Vivamus sollicitudin egestas sapien id sodales. Morbi sollicitudin ullamcorper velit, vel bibendum dolor vestibulum vitae. Nulla eleifend tortor eget arcu pharetra sollicitudin. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed mollis dictum justo, eu pharetra ligula sodales nec. Nullam at mi vitae dui convallis rutrum. Sed auctor malesuada sapien tincidunt tempus. Nam eget nunc id enim malesuada pellentesque eget et augue. Pellentesque mollis, turpis at commodo dictum, justo leo tincidunt dui, ac faucibus purus erat vitae urna. Morbi vel arcu non lacus pellentesque mattis."
+          }, {
+            "tag": "p",
+            "content": "Vestibulum iaculis tincidunt lectus, feugiat faucibus nisl adipiscing lacinia. Morbi eu arcu ante, non pretium diam. Praesent semper congue lectus, quis fringilla velit congue et. Duis mollis porta dapibus. Maecenas nulla neque, ultrices pharetra bibendum et, ultrices vitae nibh. Proin dolor augue, semper in facilisis id, scelerisque vitae tortor. Fusce aliquet feugiat neque eget lobortis. In accumsan tempus nibh, sed ornare tortor ullamcorper quis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Ut sapien est, molestie ac dignissim vel, euismod at ipsum. Donec vitae arcu vel orci vestibulum."
+          }, {
+            "tag": "p",
+            "content": "Suspendisse rhoncus ultrices commodo. Cras a leo at massa eleifend hendrerit sit amet ac nisi. Nullam et enim justo. Suspendisse potenti. Vestibulum interdum quam ut felis condimentum tincidunt. Proin nec augue tellus. Aliquam dapibus volutpat mauris non pretium. Maecenas est nisi, volutpat in aliquam eget, tincidunt vitae turpis. Sed tincidunt massa varius mi." 
+          }
+        ]
+      }
+    ]
+  }, {
+    "tag": "div",
+    // "closing": "tag",
+    "attributes": { 
+      "class": ["container"]
+    },
+    "children": [
+      {
+        "tag": "div",
+        // "closing": "tag",
+        "attributes": {
+          "class": ["content"]
+        },
+        "children": [
+          {
+            "tag": "div",
+            "attributes": {
+              "class": ["outer-col-container", "neg-margin-left"]
+            },
+            "children": [
+              {
+                "tag": "div",
+                "attributes": {
+                  "class": ["col-a"]
+                },
+                "children": [
+                  {
+                    "tag": "img",
+                    "attributes": {
+                      "src": "images/surf-a.jpg"
+                    }
+                  }
+                ]
+              }, {
+                "tag": "div",
+                "attributes": {
+                  "class": ["col-a"]
+                },
+                "children": [
+                  {
+                    "tag": "img",
+                    "attributes": {
+                      "src": "images/surf-b.jpg"
+                    }
+                  }
+                ]
+              }, {
+                "tag": "div",
+                "attributes": {
+                  "class": ["col-a"]
+                },
+                "children": [
+                  {
+                    "tag": "img",
+                    "attributes": {
+                      "src": "images/surf-c.jpg"
+                    }
+                  }
+                ]
+              }, {
+                "tag": "div",
+                "attributes": {
+                  "class": ["col-a"]
+                },
+                "children": [
+                  {
+                    "tag": "img",
+                    "attributes": {
+                      "src": "images/surf-d.jpg"
+                    }
+                  }
+                ]
+              }, {
+                "tag": "div",
+                "attributes": {
+                  "class": ["col-a"]
+                },
+                "children": [
+                  {
+                    "tag": "img",
+                    "attributes": {
+                      "src": "images/surf-e.jpg"
+                    }
+                  }
+                ]
+              }, {
+                "tag": "div",
+                "attributes": {
+                  "class": ["col-a"]
+                },
+                "children": [
+                  {
+                    "tag": "img",
+                    "attributes": {
+                      "src": "images/surf-f.jpg"
+                    }
+                  }
+                ]
+              }, {
+                "tag": "div",
+                "attributes": {
+                  "class": ["col-a"]
+                },
+                "children": [
+                  {
+                    "tag": "img",
+                    "attributes": {
+                      "src": "images/surf-g.jpg"
+                    }
+                  }
+                ]
+              }, {
+                "tag": "div",
+                "attributes": {
+                  "class": ["col-a"]
+                },
+                "children": [
+                  {
+                    "tag": "img",
+                    "attributes": {
+                      "src": "images/surf-h.jpg"
+                    }
+                  }
+                ]
+              }, {
+                "tag": "div",
+                "attributes": {
+                  "class": ["col-a"]
+                },
+                "children": [
+                  {
+                    "tag": "img",
+                    "attributes": {
+                      "src": "images/surf-i.jpg"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }, {
+    "tag": "div",
+    // "closing": "tag",
+    "attributes": { 
+      "class": ["container"]
+    },
+    "children": [
+      {
+        "tag": "div",
+        // "closing": "tag",
+        "attributes": {
+          "class": ["content", "pad-top-54"]
+        },
+        "children": [
+          {
+            "tag": "p",
+            "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In euismod fermentum arcu, non rutrum dolor vehicula at. Donec libero nunc, gravida eleifend volutpat et, viverra quis ligula. In egestas justo mauris. Phasellus felis metus, egestas blandit accumsan sit amet, fermentum eget orci. Etiam erat metus, tristique ultricies scelerisque non, suscipit at odio. Sed pharetra fermentum diam, a lacinia nulla tempus non. Aliquam lacus metus, pharetra at tempus a, auctor ac sem. Aliquam bibendum felis vel lorem fringilla malesuada. Pellentesque eget tincidunt lorem. Nullam nulla nibh, placerat eget placerat eget, tristique aliquam purus. Praesent quis eros eget sem posuere interdum et a ante. Aliquam erat volutpat. Etiam adipiscing turpis sit amet massa consequat varius id id leo. Nunc sollicitudin viverra tempor."
+          }, {
+            "tag": "p",
+            "content": "Sed sit amet odio elit. Praesent venenatis nulla non augue ultrices in mollis ipsum laoreet. Nulla facilisi. Nulla non lectus leo. Quisque nibh lorem, tempus nec rhoncus vel, aliquet eget justo. Pellentesque eu ipsum eros. Nunc tempus tempus cursus."
+          }, {
+            "tag": "img",
+            "attributes": {
+              "src": "images/happy-girl.jpg"
+            }
+          }, {
+            "tag": "p",
+            "content": "Nunc eu lectus mi. Vivamus sollicitudin egestas sapien id sodales. Morbi sollicitudin ullamcorper velit, vel bibendum dolor vestibulum vitae. Nulla eleifend tortor eget arcu pharetra sollicitudin. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed mollis dictum justo, eu pharetra ligula sodales nec. Nullam at mi vitae dui convallis rutrum. Sed auctor malesuada sapien tincidunt tempus. Nam eget nunc id enim malesuada pellentesque eget et augue. Pellentesque mollis, turpis at commodo dictum, justo leo tincidunt dui, ac faucibus purus erat vitae urna. Morbi vel arcu non lacus pellentesque mattis."
+          }, {
+            "tag": "p",
+            "content": "Vestibulum iaculis tincidunt lectus, feugiat faucibus nisl adipiscing lacinia. Morbi eu arcu ante, non pretium diam. Praesent semper congue lectus, quis fringilla velit congue et. Duis mollis porta dapibus. Maecenas nulla neque, ultrices pharetra bibendum et, ultrices vitae nibh. Proin dolor augue, semper in facilisis id, scelerisque vitae tortor. Fusce aliquet feugiat neque eget lobortis. In accumsan tempus nibh, sed ornare tortor ullamcorper quis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Ut sapien est, molestie ac dignissim vel, euismod at ipsum. Donec vitae arcu vel orci vestibulum."
+          }, {
+            "tag": "p",
+            "content": "Suspendisse rhoncus ultrices commodo. Cras a leo at massa eleifend hendrerit sit amet ac nisi. Nullam et enim justo. Suspendisse potenti. Vestibulum interdum quam ut felis condimentum tincidunt. Proin nec augue tellus. Aliquam dapibus volutpat mauris non pretium. Maecenas est nisi, volutpat in aliquam eget, tincidunt vitae turpis. Sed tincidunt massa varius mi."
           }
         ]
       }
