@@ -24,9 +24,9 @@ $.ajax({
   // console.log( 'data',  data);
   // console.log( 'status',  status);
   // console.log( 'request',  request);
-  data.forEach(function(element, index, array) {
-    var parent = $('body');
-    render(element, parent);
+  data.forEach(function(child, index, array) {
+    var $parent = $('body');
+    render(child, $parent);
   });
 })
 .fail(function(request, status, error) {
@@ -67,27 +67,33 @@ var render = function(node, $parent){
   if (node.tag === 'img'){
     element.push('/>');
   } else {
-    element.push('>');
+    element.push('></' + node.tag);
   }
-  
-  // make the element array a string
-  var element = element.join(' ');
+
+  // make a jQuery object out of the element
+  var $element = $(element.join(' '));
 
   // write current value to the DOM
-  $parent.append(element);
+  $parent.append($element);
 
-  
+  // if has content, write it to the DOM  
+  if(node.content){
+    $element.text(node.content);
+  }
 
+  // if it has children, repeat for children
+  if(node.children){
+    // recurse, passing in children array
+    debugger;
+    // render(node.children, $element);
+    node.children.forEach(function(child, index, array) {
+
+      render(child, $element);
+    });
+  }
 
 };
 
-// if has content, write it to the DOM     
-// if it has children
-  // recurse, passing in children array
-// if it is a self closing tag
-  // add " />"
-// If it is not a self closing tag
-  // add "</ + tag >"
 
 
 // append to body

@@ -35,7 +35,7 @@
         "children": [
           {
             "tag": "p",
-            "content": "orem ipsum dolor sit amet, consectetur adipiscing elit. In euismod fermentum arcu, non rutrum dolor vehicula at. Donec libero nunc, gravida eleifend volutpat et, viverra quis ligula. In egestas justo mauris. Phasellus felis metus, egestas blandit accumsan sit amet, fermentum eget orci. Etiam erat metus, tristique ultricies scelerisque non, suscipit at odio. Sed pharetra fermentum diam, a lacinia nulla tempus non. Aliquam lacus metus, pharetra at tempus a, auctor ac sem. Aliquam bibendum felis vel lorem fringilla malesuada. Pellentesque eget tincidunt lorem. Nullam nulla nibh, placerat eget placerat eget, tristique aliquam purus. Praesent quis eros eget sem posuere interdum et a ante. Aliquam erat volutpat. Etiam adipiscing turpis sit amet massa consequat varius id id leo. Nunc sollicitudin viverra tempor."
+            "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In euismod fermentum arcu, non rutrum dolor vehicula at. Donec libero nunc, gravida eleifend volutpat et, viverra quis ligula. In egestas justo mauris. Phasellus felis metus, egestas blandit accumsan sit amet, fermentum eget orci. Etiam erat metus, tristique ultricies scelerisque non, suscipit at odio. Sed pharetra fermentum diam, a lacinia nulla tempus non. Aliquam lacus metus, pharetra at tempus a, auctor ac sem. Aliquam bibendum felis vel lorem fringilla malesuada. Pellentesque eget tincidunt lorem. Nullam nulla nibh, placerat eget placerat eget, tristique aliquam purus. Praesent quis eros eget sem posuere interdum et a ante. Aliquam erat volutpat. Etiam adipiscing turpis sit amet massa consequat varius id id leo. Nunc sollicitudin viverra tempor."
           }, {
             "tag": "p",
             "content": "Sed sit amet odio elit. Praesent venenatis nulla non augue ultrices in mollis ipsum laoreet. Nulla facilisi. Nulla non lectus leo. Quisque nibh lorem, tempus nec rhoncus vel, aliquet eget justo. Pellentesque eu ipsum eros. Nunc tempus tempus cursus."
@@ -207,7 +207,7 @@
       {
         "tag": "div",
         "attributes": {
-          "class": ["content", "pad-top-54"]
+          "class": ["content", "pad-bottom-54"]
         },
         "children": [
           {
