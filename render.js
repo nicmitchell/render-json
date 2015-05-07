@@ -1,16 +1,15 @@
 // JSON
-// Put closing tag in logic
-// tag: string to describe the html node element
-// content: string text content between open and closing tags
-// children: array of child elements as objects
-// attributes: object to enumerate attributes as key
-  // class: array of strings for class names
-  // src: string for image path
+  // Put closing tag in logic
+  // tag: string to describe the html node element
+  // content: string text content between open and closing tags
+  // children: array of child elements as objects
+  // attributes: object to enumerate attributes as key
+    // class: array of strings for class names
+    // src: string for image path
 
 // RENDER
-// load json data via AJAX
-// parse json data
-
+  // load json data via AJAX
+  // parse json data
 $(function(){
   $.ajax({
     url: 'data.json',
@@ -81,7 +80,7 @@ $(function(){
     // if it has children, recurse for children
     if(node.children){
       node.children.forEach(function(child, index, array) {
-        
+
         // pass in the target child and it's parent element
         render(child, $element);
       });
