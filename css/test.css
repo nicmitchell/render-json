@@ -1,0 +1,59 @@
+body {
+	font-family: Georgia, serif;
+	font-size: 18px;
+	line-height: 25px;
+	margin:0px;
+	color: #000
+}
+.container {
+	width:100%;
+	overflow: hidden;
+
+}
+.content {
+	width:95%;
+	max-width: 650px;
+	margin:0px auto;
+}
+h1 { 
+	font-family: Georgia, serif;
+	font-weight: 100;
+	font-size: 72px;
+	line-height:70px;
+	margin: 12px 0px;
+}
+h2 { 
+	font-family: Georgia, serif;
+	font-style: italic;
+	font-size: 26px;
+	font-weight: normal;
+	line-height:31px;
+	margin: 12px 0px;
+}
+
+img {
+width:100%;
+	height: auto;
+}
+.pad-top-36 {
+	padding-top:36px;
+}
+.pad-bottom-36 {
+	padding-bottom: 36px;
+}
+.pad-top-54 {
+	padding-top:54px;
+}
+.pad-bottom-54 {
+	padding-bottom: 54px;
+}
+.col-a {
+	float: left;
+	width:30%;
+	padding-left:3%;
+	padding-bottom: 18px;
+	overflow: hidden;
+}
+.neg-margin-left {
+	margin-left:-3%;
+}
