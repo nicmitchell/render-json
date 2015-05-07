@@ -1,0 +1,15 @@
+{
+  "name": "js test",
+  "version": "0.0.0",
+  "authors": [
+    "Nic Mitchell <nic@nicmitchell.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
