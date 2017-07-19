@@ -9,8 +9,10 @@
 
 // RENDER
   // load json data via AJAX
-  // parse json data
+  // parse json data, build array of DOM nodes strings
 $(function(){
+  var elements = [];
+
   $.ajax({
     url: 'data.json',
     type: 'GET',
@@ -19,9 +21,9 @@ $(function(){
 
     // pass each child node to render function
     nodes.forEach(function(child, index, array) {
-      var $parent = $('body');
-      render(child, $parent);
+      render(child, elements);
     });
+    $('body').append(elements.join(''));
   })
   .fail(function(request, status, error) {
 
@@ -31,8 +33,7 @@ $(function(){
   });
 
   // recurse through children nodes
-  // not doing depth first recursion, so no base case necessary
-  var render = function(node, $parent){
+  var render = function(node, parent){
     var element = [];
     var attributes = node.attributes;
     // open tag and element 
@@ -40,6 +41,8 @@ $(function(){
 
     // if has attributes
     if (attributes){
+      // pad the tag name
+      element.push(' ');
 
       // add all attributes
       for (var key in attributes){
@@ -59,32 +62,28 @@ $(function(){
     }
 
     // close the tag
-    // this could also go in json data
     if (node.tag === 'img'){
       element.push('/>');
     } else {
-      element.push('></' + node.tag);
+      element.push('>');
     }
-
-    // make a jQuery object out of the element
-    var $element = $(element.join(' '));
-
-    // write current value to the DOM
-    $parent.append($element);
 
     // if has content, write it to the DOM  
     if(node.content){
-      $element.text(node.content);
+      element.push(node.content);
     }
 
-    // if it has children, recurse for children
+    parent.push(element.join(''));
+
+    // lather, rinse, recurse
     if(node.children){
       node.children.forEach(function(child, index, array) {
-
-        // pass in the target child and it's parent element
-        render(child, $element);
+        render(child, parent);
       });
     }
 
+    if (node.tag !== 'img'){
+      parent.push('</' + node.tag + '>');
+    }
   };
 });
